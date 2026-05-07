@@ -14,6 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
+      comments: {
+        Row: {
+          id: string
+          task_id: string | null
+          author_id: string
+          body: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          task_id?: string | null
+          author_id: string
+          body: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          task_id?: string | null
+          author_id?: string
+          body?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
+      tags: {
+        Row: {
+          id: string
+          name: string
+          color: string
+          created_by: string
+          created_at: string
+        }
+        Insert: {
+          id?: string
+          name: string
+          color?: string
+          created_by: string
+          created_at?: string
+        }
+        Update: {
+          id?: string
+          name?: string
+          color?: string
+          created_by?: string
+          created_at?: string
+        }
+        Relationships: []
+      }
+      task_tags: {
+        Row: {
+          task_id: string
+          tag_id: string
+        }
+        Insert: {
+          task_id: string
+          tag_id: string
+        }
+        Update: {
+          task_id?: string
+          tag_id?: string
+        }
+        Relationships: []
+      }
       tasks: {
         Row: {
           assignee_id: string | null

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, List, Kanban, Users } from "lucide-react";
+import { LayoutDashboard, List, Kanban, Users, MessageSquare, Tag } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -10,6 +10,8 @@ const NAV_ITEMS = [
   { href: "/tasks", icon: List, label: "일감 목록" },
   { href: "/board", icon: Kanban, label: "칸반 보드" },
   { href: "/members", icon: Users, label: "팀원 관리" },
+  { href: "/comments", icon: MessageSquare, label: "댓글" },
+  { href: "/tags", icon: Tag, label: "태그 관리" },
 ];
 
 export function Sidebar() {
